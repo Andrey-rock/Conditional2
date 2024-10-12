@@ -4,25 +4,21 @@ public class Main {
         byte clientOS = 1;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         //Задание 2
-        byte clientOS1 = 0;
-        int yearRelease = 2020;
-        if (clientOS1 == 0) {
-            if (yearRelease < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            }
-        } else if (clientOS1 == 1) {
-            if (yearRelease < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        byte clientOS1 = 1;
+        int clientDeviceYear = 2015;
+        if (clientOS1 == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS1 == 0 && clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS1 == 1 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         //Задание 3
